@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20200311 17:56:09.976" generator="Robot 3.1.2 (Python 2.7.16 on darwin)">
+<suite source="/Users/gunsoradanai/Documents/automedtestE-Service/testcase/testcase.robot" id="s1" name="Testcase">
+<test id="s1-t1" name="UploadByofficestaff">
+<kw type="setup" name="Open E-Services" library="eservice_keyword">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://hqdev-e-service-front.glo.or.th/</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20200311 17:56:10.449" level="INFO">Opening browser 'chrome' to base url 'https://hqdev-e-service-front.glo.or.th/'.</msg>
+<status status="PASS" endtime="20200311 17:56:14.199" starttime="20200311 17:56:10.449"></status>
+</kw>
+<status status="PASS" endtime="20200311 17:56:14.200" starttime="20200311 17:56:10.449"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<status status="PASS" endtime="20200311 17:56:14.202" starttime="20200311 17:56:14.201"></status>
+</kw>
+<kw name="Login By Office staff" library="eservice_keyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${Clicklabellogin}</arg>
+</arguments>
+<msg timestamp="20200311 17:56:14.203" level="INFO">Clicking element '//input[@id='username']'.</msg>
+<status status="PASS" endtime="20200311 17:56:16.307" starttime="20200311 17:56:14.203"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Clicklabellogin}</arg>
+<arg>2501</arg>
+</arguments>
+<msg timestamp="20200311 17:56:16.308" level="INFO">Typing text '2501' into text field '//input[@id='username']'.</msg>
+<status status="PASS" endtime="20200311 17:56:19.441" starttime="20200311 17:56:16.307"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${Clicklabelpassword}</arg>
+</arguments>
+<msg timestamp="20200311 17:56:19.442" level="INFO">Clicking element '//input[@id='password']'.</msg>
+<status status="PASS" endtime="20200311 17:56:26.514" starttime="20200311 17:56:19.442"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Clicklabelpassword}</arg>
+<arg>tqm887</arg>
+</arguments>
+<msg timestamp="20200311 17:56:26.515" level="INFO">Typing text 'tqm887' into text field '//input[@id='password']'.</msg>
+<status status="PASS" endtime="20200311 17:56:29.592" starttime="20200311 17:56:26.514"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//button[@class='btn btn-login btn-primary']</arg>
+</arguments>
+<msg timestamp="20200311 17:56:29.594" level="INFO">Clicking element '//button[@class='btn btn-login btn-primary']'.</msg>
+<status status="PASS" endtime="20200311 17:56:36.799" starttime="20200311 17:56:29.593"></status>
+</kw>
+<status status="PASS" endtime="20200311 17:56:36.799" starttime="20200311 17:56:14.202"></status>
+</kw>
+<kw name="uploadbook" library="eservice_keyword">
+<kw name="wait and click element" library="eservice_keyword">
+<arguments>
+<arg>xpath=//a[@href="/cms/upload"][@class='nav-link' and contains(.,'บริการอัปโหลดเอกสาร')]</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>5x</arg>
+<arg>5s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200311 17:56:36.802" level="INFO">Clicking element 'xpath=//a[@href="/cms/upload"][@class='nav-link' and contains(.,'บริการอัปโหลดเอกสาร')]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20200311 17:56:40.603" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-780.png"&gt;&lt;img src="selenium-screenshot-780.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200311 17:56:40.603" starttime="20200311 17:56:37.820"></status>
+</kw>
+<msg timestamp="20200311 17:56:40.608" level="FAIL">Element with locator 'xpath=//a[@href="/cms/upload"][@class='nav-link' and contains(.,'บริการอัปโหลดเอกสาร')]' not found.</msg>
+<status status="FAIL" endtime="20200311 17:56:40.608" starttime="20200311 17:56:36.802"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200311 17:56:45.610" level="INFO">Clicking element 'xpath=//a[@href="/cms/upload"][@class='nav-link' and contains(.,'บริการอัปโหลดเอกสาร')]'.</msg>
+<status status="PASS" endtime="20200311 17:56:47.741" starttime="20200311 17:56:45.609"></status>
+</kw>
+<status status="PASS" endtime="20200311 17:56:47.742" starttime="20200311 17:56:36.801"></status>
+</kw>
+<status status="PASS" endtime="20200311 17:56:47.742" starttime="20200311 17:56:36.800"></status>
+</kw>
+<kw name="wait and click element" library="eservice_keyword">
+<arguments>
+<arg>//a[@href="/cms/upload/search_prov_money" and contains(., 'สอบถามข้อมูลหนังสือรับรองเงินฯ')]</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>5x</arg>
+<arg>5s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200311 17:56:47.744" level="INFO">Clicking element '//a[@href="/cms/upload/search_prov_money" and contains(., 'สอบถามข้อมูลหนังสือรับรองเงินฯ')]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20200311 17:56:50.484" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-781.png"&gt;&lt;img src="selenium-screenshot-781.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200311 17:56:50.484" starttime="20200311 17:56:48.779"></status>
+</kw>
+<msg timestamp="20200311 17:56:50.492" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=80.0.3987.132)
+</msg>
+<status status="FAIL" endtime="20200311 17:56:50.492" starttime="20200311 17:56:47.744"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200311 17:56:55.494" level="INFO">Clicking element '//a[@href="/cms/upload/search_prov_money" and contains(., 'สอบถามข้อมูลหนังสือรับรองเงินฯ')]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20200311 17:56:57.942" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-782.png"&gt;&lt;img src="selenium-screenshot-782.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200311 17:56:57.942" starttime="20200311 17:56:56.520"></status>
+</kw>
+<msg timestamp="20200311 17:56:57.942" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=80.0.3987.132)
+</msg>
+<status status="FAIL" endtime="20200311 17:56:57.943" starttime="20200311 17:56:55.493"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200311 17:57:02.947" level="INFO">Clicking element '//a[@href="/cms/upload/search_prov_money" and contains(., 'สอบถามข้อมูลหนังสือรับรองเงินฯ')]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20200311 17:57:05.753" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-783.png"&gt;&lt;img src="selenium-screenshot-783.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200311 17:57:05.753" starttime="20200311 17:57:03.975"></status>
+</kw>
+<msg timestamp="20200311 17:57:05.754" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=80.0.3987.132)
+</msg>
+<status status="FAIL" endtime="20200311 17:57:05.754" starttime="20200311 17:57:02.946"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200311 17:57:10.755" level="INFO">Clicking element '//a[@href="/cms/upload/search_prov_money" and contains(., 'สอบถามข้อมูลหนังสือรับรองเงินฯ')]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20200311 17:57:13.471" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-784.png"&gt;&lt;img src="selenium-screenshot-784.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200311 17:57:13.471" starttime="20200311 17:57:11.782"></status>
+</kw>
+<msg timestamp="20200311 17:57:13.472" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=80.0.3987.132)
+</msg>
+<status status="FAIL" endtime="20200311 17:57:13.472" starttime="20200311 17:57:10.755"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200311 17:57:18.474" level="INFO">Clicking element '//a[@href="/cms/upload/search_prov_money" and contains(., 'สอบถามข้อมูลหนังสือรับรองเงินฯ')]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20200311 17:57:21.207" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-785.png"&gt;&lt;img src="selenium-screenshot-785.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200311 17:57:21.208" starttime="20200311 17:57:19.493"></status>
+</kw>
+<msg timestamp="20200311 17:57:21.208" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=80.0.3987.132)
+</msg>
+<status status="FAIL" endtime="20200311 17:57:21.209" starttime="20200311 17:57:18.473"></status>
+</kw>
+<msg timestamp="20200311 17:57:21.209" level="FAIL">Keyword 'Click Element' failed after retrying 5 times. The last error was: ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=80.0.3987.132)
+</msg>
+<status status="FAIL" endtime="20200311 17:57:21.209" starttime="20200311 17:56:47.743"></status>
+</kw>
+<status status="FAIL" endtime="20200311 17:57:21.209" starttime="20200311 17:56:47.742"></status>
+</kw>
+<status status="FAIL" endtime="20200311 17:57:21.210" starttime="20200311 17:56:36.800"></status>
+</kw>
+<status status="FAIL" endtime="20200311 17:57:21.210" critical="yes" starttime="20200311 17:56:10.448">Keyword 'Click Element' failed after retrying 5 times. The last error was: ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=80.0.3987.132)
+</status>
+</test>
+<status status="FAIL" endtime="20200311 17:57:21.211" starttime="20200311 17:56:09.978"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Testcase" pass="0">Testcase</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
